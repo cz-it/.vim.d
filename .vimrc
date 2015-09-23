@@ -43,7 +43,10 @@ set numberwidth=4	" width of line number
 "** status line
 set laststatus=2	" location of status information
 set statusline=%F\ [FORMAT:%{&ff}]\ [LINE:%l(%p%%)-COL:%v(%c)]\ \ %m%r\ 
-
+"** TAB Space
+set ts=4
+set expandtab
+set autoindent
 
 "************************************************
 "**  IDE setting
