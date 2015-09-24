@@ -65,6 +65,7 @@ syntax enable
 
 "*** template files
 autocmd BufNewFile *.go 0r ~/.vim/template/go.tpl  " golang
+let NERDTreeWinPos="right"
 
 "*** golang
 
