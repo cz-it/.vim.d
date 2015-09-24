@@ -16,7 +16,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 "Plugins
-Plugin 'nsf/gocode', {'rtp': 'vim/'}
+Plugin 'nsf/gocode', {'rtp': 'vim/'} " golang
+Plugin 'scrooloose/nerdtree'         " directory tree
 
 
 " All of your Plugins must be added before the following line
@@ -43,10 +44,16 @@ set numberwidth=4	" width of line number
 "** status line
 set laststatus=2	" location of status information
 set statusline=%F\ [FORMAT:%{&ff}]\ [LINE:%l(%p%%)-COL:%v(%c)]\ \ %m%r\ 
+
 "** TAB Space
 set ts=4
 set expandtab
 set autoindent
+
+"** Shortcut
+map <F12> :NERDTreeToggle<CR>
+
+
 
 "************************************************
 "**  IDE setting
@@ -55,6 +62,9 @@ filetype on
 
 "*** syntax hight light
 syntax enable
+
+"*** template files
+autocmd BufNewFile *.go 0r ~/.vim/template/go.tpl  " golang
 
 "*** golang
 
