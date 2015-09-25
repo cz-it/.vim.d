@@ -18,6 +18,9 @@ Plugin 'VundleVim/Vundle.vim'
 "Plugins
 Plugin 'nsf/gocode', {'rtp': 'vim/'} " golang
 Plugin 'scrooloose/nerdtree'         " directory tree
+Plugin 'fatih/vim-go'                " golang misc/vim 
+Plugin 'majutsushi/tagbar'           " tagbar
+Plugin 'scrooloose/syntastic'        " syntas checking
 
 
 " All of your Plugins must be added before the following line
