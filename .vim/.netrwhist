@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/apollo/Work/Repos/com.tencent.svn/apollo_voice/apollo_voice_proj/trunk/qt/sdk/androidstub/.settings'
+let g:netrw_dirhist_2='/Users/apollo/go_proj/src/mac27.tx/learn'
+let g:netrw_dirhist_3='/Users/apollo/Work/Repos/com.tencent.svn/apollo_voice/apollo_voice_proj/trunk/voice/dist'
