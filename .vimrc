@@ -7,7 +7,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/vundle
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -21,6 +21,8 @@ Plugin 'scrooloose/nerdtree'         " directory tree
 Plugin 'fatih/vim-go'                " golang misc/vim 
 Plugin 'majutsushi/tagbar'           " tagbar
 Plugin 'scrooloose/syntastic'        " syntas checking
+Plugin 'OmniSharp/omnisharp-vim'     " CSharp
+Plugin 'Valloric/YouCompleteMe'      " for auto complete
 
 
 " All of your Plugins must be added before the following line
