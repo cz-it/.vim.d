@@ -19,10 +19,12 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'nsf/gocode', {'rtp': 'vim/'} " golang
 Plugin 'scrooloose/nerdtree'         " directory tree
 Plugin 'fatih/vim-go'                " golang misc/vim 
-Plugin 'majutsushi/tagbar'           " tagbar
+Plugin 'majutsushi/tagbar'           " tagbar should install ctags&gotags
 Plugin 'scrooloose/syntastic'        " syntas checking
 Plugin 'OmniSharp/omnisharp-vim'     " CSharp
 Plugin 'Valloric/YouCompleteMe'      " for auto complete
+Plugin 'fatih/molokai'               " a theme for fatih
+Plugin 'SirVer/ultisnips'            " for alias
 
 
 " All of your Plugins must be added before the following line
@@ -57,6 +59,7 @@ set autoindent
 
 "** Shortcut
 map <F12> :NERDTreeToggle<CR>
+map <F9> :TagbarToggle<CR>
 
 
 
@@ -73,6 +76,34 @@ autocmd BufNewFile *.go 0r ~/.vim/template/go.tpl  " golang
 let NERDTreeWinPos="right"
 
 "*** golang
+"**** go tags
+let g:tagbar_type_go = {
+	\ 'ctagstype' : 'go',
+	\ 'kinds'     : [
+		\ 'p:package',
+		\ 'i:imports:1',
+		\ 'c:constants',
+		\ 'v:variables',
+		\ 't:types',
+		\ 'n:interfaces',
+		\ 'w:fields',
+		\ 'e:embedded',
+		\ 'm:methods',
+		\ 'r:constructor',
+		\ 'f:functions'
+	\ ],
+	\ 'sro' : '.',
+	\ 'kind2scope' : {
+		\ 't' : 'ctype',
+		\ 'n' : 'ntype'
+	\ },
+	\ 'scope2kind' : {
+		\ 'ctype' : 't',
+		\ 'ntype' : 'n'
+	\ },
+	\ 'ctagsbin'  : 'gotags',
+	\ 'ctagsargs' : '-sort -silent'
+\ }
 
 "*** alias
 iabbrev mi int<Space>main(int<Space>argc,char<Space>*argv[])
